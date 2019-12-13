@@ -1,4 +1,4 @@
-package com.julio.food
+package com.julio.food.adapter
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -7,6 +7,9 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.julio.food.R
+import com.julio.food.activity.DetailActivity
+import com.julio.food.model.Food
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_food.view.*
 
