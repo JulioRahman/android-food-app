@@ -1,7 +1,7 @@
 package com.julio.food
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -13,11 +13,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var rvFood = rv_food
+        rv_food.setHasFixedSize(true)
 
         list.addAll(FoodsData.listData)
 
-        rvFood.layoutManager = GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false)
-        rvFood.adapter = GridAdapter(list)
+        rv_food.layoutManager = GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false)
+        rv_food.adapter = GridAdapter(list)
     }
 }
