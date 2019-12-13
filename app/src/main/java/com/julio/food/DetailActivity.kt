@@ -11,11 +11,16 @@ class DetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
 
-        actionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         title = "Detail"
         Picasso.get().load(intent.getStringExtra("PHOTO")).into(iv_image)
         tv_name.text = intent.getStringExtra("NAME")
         tv_detail.text = intent.getStringExtra("DETAIL")
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }
